@@ -1,0 +1,56 @@
+<html>
+
+
+    <head>
+
+        <link rel="stylesheet" type="text/css" href="board.css">
+
+        <script type="text/javascript" src="js/jquery-1.10.2.js">
+        </script>
+
+        <script type="text/javascript" src="js/jquery-ui-1.10.4.js">
+        </script>
+
+        <script type="text/javascript" src="board.js">
+
+        </script>
+
+        <script type="text/javascript" src="piece.js">
+
+        </script>
+
+        <script type="text/javascript" src="data.js">
+
+        </script>
+
+        <script lang="javascript">
+
+
+
+            function ready(){
+                var elem = $("#aqui");
+                var board = boards();
+                console.log( "boards:" + board );
+                for( var b in board ){
+                    var e = $("<div/>")
+                    board[b].render( e );
+                    elem.append(e);
+                }
+            }
+
+            $(document).ready(ready);
+
+        </script>
+
+    </head>
+    <body>
+
+        Aqui va el span
+        <span id="aqui">
+
+        </span>
+        ya esta el span
+
+    </body>
+
+</html>
